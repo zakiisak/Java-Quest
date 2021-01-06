@@ -12,7 +12,7 @@ Have fun!
 
 Here's a download link for a compiled version:
 
-[Download](https://drive.google.com/file/d/1QsdG5WVdEhaySOuuscGmVfPQzAKK9-Lr/view?usp=sharing)
+[Download](https://drive.google.com/uc?export=download&id=1QsdG5WVdEhaySOuuscGmVfPQzAKK9-Lr)
 
 ## Screenhots
 <img src="screenshot7.png" alt="drawing" width="320"/><img src="screenshot1.png" alt="drawing" width="320"/><img src="screenshot2.png" alt="drawing" width="320"/>
