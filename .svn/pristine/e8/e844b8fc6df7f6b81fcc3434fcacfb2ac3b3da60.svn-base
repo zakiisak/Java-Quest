@@ -1,0 +1,25 @@
+package game.sound;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AudioManager {
+	
+	private Map<String, Audio> audio = new HashMap<String, Audio>();
+	
+	public AudioManager() {}
+	
+	public Audio get(String name) {
+		return audio.get(name);
+	}
+	
+	public Audio add(Audio audio, String name) {
+		this.audio.put(name, audio);
+		return audio;
+	}
+	
+	public void dispose() {
+		for(Audio a : audio.values())
+			a.dispose();
+	}
+}

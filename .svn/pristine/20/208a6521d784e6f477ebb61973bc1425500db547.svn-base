@@ -1,0 +1,15 @@
+importPackage(Packages.flames.util);
+importPackage(Packages.flames.item);
+importPackage(Packages.flames.world);
+importPackage(Packages.flames.entity);
+importPackage(Packages.flames.entity.mob);
+importPackage(Packages.com.badlogic.gdx.graphics);
+importPackage(Packages.java.lang);
+
+item.setName("Copper Helmet");
+item.setRarity(Item.Rarity.COMMON);
+item.setSprite(SheetLoader.add("res/textures/items/copperHelmet.png"));
+item.getStats().defense = 2;
+item.getStats().crit = 10;
+item.setMaxStack(1);
+item.setType(Item.Type.HEAD);

@@ -1,0 +1,5 @@
+importPackage(Packages.flames.util);
+tile.setID(2);
+tile.setSprite(SheetLoader.add("res/textures/tiles/crackedStone.png"));
+tile.setColorCode(0x404040FF);
+tile.setSolid(true);

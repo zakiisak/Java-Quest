@@ -1,0 +1,30 @@
+importPackage(Packages.flames.util);
+importPackage(Packages.flames.item);
+importPackage(Packages.flames.world);
+importPackage(Packages.flames.entity);
+importPackage(Packages.flames.entity.mob);
+importPackage(Packages.com.badlogic.gdx.graphics);
+importPackage(Packages.java.lang);
+importPackage(Packages.java.util);
+importPackage(Packages.flames.entity.mob.enemies);
+
+item.setName("Wooden Sword");
+item.getStats().strength = 2;
+SheetLoader.add("res/textures/items/woodenSword.png");
+item.setSprite(Sprite.get("WoodenSword")a.setTint(Color.GREEN));
+item.setDescription("A low quality sword made of wood.");
+item.setCooldown(0);
+item.getStats().defense = 1;
+item.setRarity(Item.Rarity.COMMON);
+item.setType(Item.Type.WEAPON);
+item.setDamage(3, 5);
+
+item.setEvent(function(i, m, p, wo) {
+	var random = new Random();
+	//var mob = new Mob("", 
+	//Spawn.mob(wo, new Mob_Test(16, 16), p.getMiddleX() - 256 + random.nextInt(512), p.getMiddleY() - 256 + random.nextInt(512));
+	//wo.addItem(new DropItem("Copper Helmet", p.getMiddleX() - 256 + random.nextInt(512), p.getMiddleY() - 256 + random.nextInt(512)));
+	System.out.println("spawned pawner!");
+	//p.getInventory().add(new ItemStack("Copper Helmet", 1));
+	//Spawn.particles(wo, 32, 32, 32, 32, 0.0f, 4.0f, 0.95f, true, 30);
+});

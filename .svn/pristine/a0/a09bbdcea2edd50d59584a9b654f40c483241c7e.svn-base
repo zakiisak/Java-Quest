@@ -1,0 +1,6 @@
+java.lang.System.out.println("This is an awesome Event!!DAS!");
+gdx.gl.glClearColor(1, 0, 0, 1);
+gdx.graphics.setTitle("World Loaded!");
+player.setPosition(512, 512);
+player.setWorld(world);
+world.setCameraController(player);

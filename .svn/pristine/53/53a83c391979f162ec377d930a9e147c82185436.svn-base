@@ -1,0 +1,49 @@
+package game.net;
+
+import com.esotericsoftware.kryonet.Client;
+import com.esotericsoftware.kryonet.Connection;
+import com.esotericsoftware.kryonet.Listener;
+
+public class NetClient extends Listener {
+	public static final int MAX_NETWORK_TRANSFER_SIZE = 768 * 768 * 8 * 8 * 2;
+	
+	private boolean loggedIn = false;
+	private Client client;
+	
+	public void connected(Connection c) {
+		loggedIn = true;
+	}
+	public void received(Connection c, Object o) {}
+	
+	public void disconnected(Connection c) {
+		loggedIn = false;
+	}
+	
+	public void connect(String ip, int tcpPort, int udpPort) {
+		int maxSize = MAX_NETWORK_TRANSFER_SIZE;
+		this.client = new Client(maxSize, maxSize);
+		Network.register(this.client.getKryo());
+		this.client.addListener(this);
+		this.client.start();
+		
+		try {
+			this.client.connect(5000, ip, tcpPort, udpPort);
+		}
+		catch(Exception e) {
+			this.client = null;
+			return;
+		}
+	}
+	
+	public Client getCommunication()
+	{
+		return client;
+	}
+	
+	public boolean isConnected()
+	{
+		if(this.client == null) loggedIn = false;
+		return loggedIn;
+	}
+	
+}

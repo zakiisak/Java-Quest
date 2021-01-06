@@ -1,0 +1,58 @@
+package game.utils;
+
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+
+public class FontUtils {
+	public static final int ALLIGN_LEFT = 0, ALLIGN_MIDDLE = 1, ALLIGN_RIGHT = 2, ALLIGN_MIDDLE_MIDDLE = 3, ALLIGN_RIGHT_ALTERNATIVE = 4;
+	private static GlyphLayout layout = new GlyphLayout();
+	
+	public static float getWidth(BitmapFont font, String text)
+	{
+		layout.setText(font, text);
+		return layout.width;
+	}
+	
+	public static float getHeight(BitmapFont font, String text)
+	{
+		layout.setText(font, text);
+		return layout.height;
+	}
+	
+	public static GlyphLayout getGlyphLayout(BitmapFont font, String text)
+	{
+		layout.setText(font, text);
+		return layout;
+	}
+	
+	public static void draw(BitmapFont font, Batch batch, String text, float x, float y, int allign) {
+		switch (allign) {
+			case ALLIGN_LEFT:
+				font.draw(batch, text, x, y);
+				break;
+			case ALLIGN_MIDDLE: {
+				float width = getWidth(font, text);
+				font.draw(batch, text, x - width / 2, y);
+				break;
+			}
+			case ALLIGN_MIDDLE_MIDDLE:
+			{
+				float width = getWidth(font, text);
+				float height = getHeight(font, text);
+				font.draw(batch, text, x - width / 2, y - height / 2);
+				break;
+			}
+			case ALLIGN_RIGHT: {
+				float width = getWidth(font, text);
+				font.draw(batch, text, x - width, y);
+				break;
+			}
+			default: {
+				font.draw(batch, text, x, y);
+				break;
+			}
+		}
+	}
+	
+}

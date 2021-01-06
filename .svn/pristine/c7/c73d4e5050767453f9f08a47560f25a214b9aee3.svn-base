@@ -1,0 +1,3 @@
+tile.setID(0);
+tile.setSolid(false);
+tile.setColorCode(0xFFFFFFFF);

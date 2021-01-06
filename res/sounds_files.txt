@@ -1,0 +1,16 @@
+Battle music 2.wav
+buzzer.wav
+click.wav
+DMGv2.wav
+enemy_hit.wav
+item.wav
+letter.wav
+levelup.wav
+LTTP_Get_HeartPiece.wav
+LTTP_Get_Key.wav
+player_hit.wav
+sell.wav
+switch.wav
+teleport.wav
+text_done.wav
+victory.wav

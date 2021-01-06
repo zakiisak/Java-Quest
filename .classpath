@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/gdx-1.6.4.jar" sourcepath="lib/gdx-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-box2d-1.6.4.jar" sourcepath="lib/gdx-box2d-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-controllers-1.6.4.jar" sourcepath="lib/gdx-controllers-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-freetype-1.6.4.jar" sourcepath="lib/gdx-freetype-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-backend-lwjgl-1.6.4.jar" sourcepath="lib/gdx-backend-lwjgl-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-box2d-platform-1.6.4-natives-desktop.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-controllers-desktop-1.6.4.jar" sourcepath="lib/gdx-controllers-desktop-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-controllers-platform-1.6.4-natives-desktop.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-platform-1.6.4-natives-desktop.jar"/>
+	<classpathentry kind="lib" path="lib/gdx-freetype-platform-1.6.4-natives-desktop.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-2.0.5.jar" sourcepath="lib/jinput-2.0.5-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-platform-2.0.5-natives-linux.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-platform-2.0.5-natives-osx.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-platform-2.0.5-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/jlayer-1.0.1-gdx.jar" sourcepath="lib/jlayer-1.0.1-gdx-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jorbis-0.0.17.jar" sourcepath="lib/jorbis-0.0.17-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jutils-1.0.0.jar" sourcepath="lib/jutils-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl_util-2.9.2.jar" sourcepath="lib/lwjgl_util-2.9.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-2.9.2.jar" sourcepath="lib/lwjgl-2.9.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-platform-2.9.2-natives-linux.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-platform-2.9.2-natives-osx.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-platform-2.9.2-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/kryonet-1.04-all.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

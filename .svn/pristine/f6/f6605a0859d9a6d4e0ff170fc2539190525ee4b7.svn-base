@@ -1,0 +1,32 @@
+package game;
+
+import com.badlogic.gdx.InputAdapter;
+
+import game.gui.TextWriter;
+
+public class Input extends InputAdapter {
+	
+	private static TextWriter activeTextWriter;
+	
+	public static void bindTextWriter(TextWriter component)
+	{
+		activeTextWriter = component;
+	}
+	
+	public static void unbindTextWriter()
+	{
+		activeTextWriter = null;
+	}
+	
+	public static TextWriter getBoundTextWriter()
+	{
+		return activeTextWriter;
+	}
+	
+	
+	public boolean keyTyped(char character) {
+		if(activeTextWriter != null) activeTextWriter.input(character);
+		return false;
+	}
+	
+}

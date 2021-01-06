@@ -1,0 +1,41 @@
+package game.net;
+
+import com.esotericsoftware.kryonet.Connection;
+import com.esotericsoftware.kryonet.Listener;
+import com.esotericsoftware.kryonet.Server;
+
+public class NetServer extends Listener {
+	public static final int MAX_NETWORK_TRANSFER_SIZE = 768 * 768 * 8 * 8 * 2;
+	
+	private Server server;
+	
+	public void start(int tcpPort, int udpPort) {
+		this.server = new Server(MAX_NETWORK_TRANSFER_SIZE, MAX_NETWORK_TRANSFER_SIZE);
+		Network.register(this.server.getKryo());
+		try {
+			this.server.bind(tcpPort, udpPort);
+		} catch (Exception e) {
+			System.out.println(
+					"Unable to start server on ports: [tcpPort=" + tcpPort
+							+ ";udpPort=" + udpPort + "] - \n" + e.getMessage());
+			return;
+		}
+		this.server.start();
+		this.server.addListener(this);
+	}
+	
+	public void connected(Connection c) {
+		System.out.println("Client connected!");
+	}
+
+	public void received(Connection c, Object o) {}
+
+	public void disconnected(Connection c) {
+		System.out.println("Disconnection id: " + c.getID());
+	}
+	
+	public Server getCommunication() {
+		return server;
+	}
+	
+}

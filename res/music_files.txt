@@ -1,0 +1,9 @@
+battle.ogg
+boss.ogg
+boss2.ogg
+cave.ogg
+cave2.ogg
+darkworld.ogg
+dark_world.ogg
+gameover.ogg
+overworld.ogg

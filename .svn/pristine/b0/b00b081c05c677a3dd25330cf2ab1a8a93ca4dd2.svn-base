@@ -1,0 +1,6 @@
+importPackage(Packages.flames.util);
+
+tile.setID(1);
+tile.setSprite(SheetLoader.add("res/textures/tiles/grass.png"));
+tile.setColorCode(0x00FF00FF);
+if(1 == 1) java.lang.System.out.println("1 == !;");

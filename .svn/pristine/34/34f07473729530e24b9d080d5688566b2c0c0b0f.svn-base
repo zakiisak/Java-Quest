@@ -1,0 +1,123 @@
+package game.graphics;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+public class Sprite {
+	
+	public static Texture SHEET;
+	public static float uniformX, uniformY;
+	
+	private static Map<String, Sprite> sprites = new HashMap<String, Sprite>();
+	
+	public static Sprite get(String name) {
+		return sprites.get(name.toLowerCase());
+	}
+	
+	public static void add(Sprite sprite, String name) {
+		sprites.put(name.toLowerCase(), sprite);
+	}
+	
+	public static void DisposeSheet() {
+		SHEET.dispose();
+	}
+	
+	public static final Sprite white = SheetLoader.add(new int[] {0xffffffff}, 1, 1, "white");
+	
+	public static final void load() {
+		
+	}
+	
+	
+	private int[] texels;
+	private float[] uv;
+	private boolean uvCreated = false;
+	private float tint = Color.WHITE.toFloatBits();
+	public final float[] vertices;
+	
+	public Sprite(int x, int y, int width, int height) {
+		setTexels(new int[] {x, y, width, height});
+		createUV();
+		vertices = new float[] {0, 0, width, 0, width, height, 0, height};
+	}
+	
+	public Sprite(Sprite sprite) {
+		texels = sprite.texels;
+		uv = sprite.uv;
+		uvCreated = sprite.uvCreated;
+		tint = sprite.tint;
+		vertices = sprite.vertices;
+	}
+	
+	public void createUV() {
+		if(!uvCreated) {
+			final float u = (float) texels[0] * uniformX;
+			final float v = (float) (texels[1] + texels[3]) * uniformY;
+			final float u2 = (float) (texels[0] + texels[2]) * uniformX;
+			final float v2 = (float) texels[1] * uniformY;
+			setUV(new float[] {u, v, u2, v2});
+			uvCreated = true;
+		}
+	}
+	
+	public void render(SpriteBatch batch, float x, float y, float width, float height) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, texels[0], texels[1], texels[2], texels[3], false, false);
+	}
+	
+	public void render(SpriteBatch batch, float x, float y, float width, float height, Color tint) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, texels[0], texels[1], texels[2], texels[3], false, false);
+	}
+	
+	public void render(SpriteBatch batch, float x, float y, float width, float height, float tint) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, texels[0], texels[1], texels[2], texels[3], false, false);
+	}
+	
+	public void renderUV(SpriteBatch batch, float x, float y, float width, float height) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, uv[0], uv[1], uv[2], uv[3]);
+	}
+	
+	public void renderUV(SpriteBatch batch, float x, float y, float width, float height, Color tint) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, uv[0], uv[1], uv[2], uv[3]);
+	}
+	
+	public void renderUV(SpriteBatch batch, float x, float y, float width, float height, float tint) {
+		batch.setColor(tint);
+		batch.draw(SHEET, x, y, width, height, uv[0], uv[1], uv[2], uv[3]);
+	}
+	
+	public int[] getTexels() {
+		return texels;
+	}
+	public void setTexels(int[] texels) {
+		this.texels = texels;
+	}
+	
+	public float[] getUV() {
+		return uv;
+	}
+	public void setUV(float[] uv) {
+		this.uv = uv;
+	}
+
+	public float getTint() {
+		return tint;
+	}
+
+	public Sprite setTint(Color tint) {
+		this.tint = tint.toFloatBits();
+		return this;
+	}
+	
+	public Sprite cpy() {
+		return new Sprite(this);
+	}
+}
