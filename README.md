@@ -13,3 +13,8 @@ Have fun!
 Here's a download link for a compiled version:
 
 [Download](https://drive.google.com/file/d/1QsdG5WVdEhaySOuuscGmVfPQzAKK9-Lr/view?usp=sharing)
+
+## Screenhots
+<img src="screenshot7.png" alt="drawing" width="320"/><img src="screenshot1.png" alt="drawing" width="320"/><img src="screenshot2.png" alt="drawing" width="320"/>
+<img src="screenshot3.png" alt="drawing" width="320"/><img src="screenshot4.png" alt="drawing" width="320"/>
+<img src="screenshot5.png" alt="drawing" width="320"/><img src="screenshot6.png" alt="drawing" width="320"/>
