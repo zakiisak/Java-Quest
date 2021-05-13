@@ -18,3 +18,17 @@ Here's a download link for a compiled version:
 <img src="screenshot7.png" alt="drawing" width="320"/><img src="screenshot1.png" alt="drawing" width="320"/><img src="screenshot2.png" alt="drawing" width="320"/>
 <img src="screenshot3.png" alt="drawing" width="320"/><img src="screenshot4.png" alt="drawing" width="320"/>
 <img src="screenshot5.png" alt="drawing" width="320"/><img src="screenshot6.png" alt="drawing" width="320"/>
+
+## Commands
+* importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(true) { for(var i = 0; i < 
+
+* Packages.game.entity.MessageBox.queue.size(); i++) { Packages.game.entity.MessageBox.queue.get(i).kill(); }} } }).start();
+
+* importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(true) { System.out.println(Packages.game.entity.MessageBox.queue.size()); } } }).start();
+
+* importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(Packages.com.badlogic.gdx.Gdx.input.isKeyPressed(com.badlogic.gdx.Input.Keys.N) == false) { Packages.game.entity.MessageBox.queue.clear(); } } }).start();
+
+* game.entity.Drops.drops.clear();
+* game.setScene(SceneGame.class);
+* game.killAllBattles();
+* player.data.setFloat("move_speed", 2)
