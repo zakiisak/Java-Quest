@@ -19,7 +19,7 @@ Here's a download link for a compiled version:
 <img src="screenshot3.png" alt="drawing" width="320"/><img src="screenshot4.png" alt="drawing" width="320"/>
 <img src="screenshot5.png" alt="drawing" width="320"/><img src="screenshot6.png" alt="drawing" width="320"/>
 
-## Commands
+## Useful Commands (Press F12)
 <code>
   
 * importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(true) { for(var i = 0; i < Packages.game.entity.MessageBox.queue.size(); i++) { Packages.game.entity.MessageBox.queue.get(i).kill(); }} } }).start();
