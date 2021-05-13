@@ -20,7 +20,7 @@ Here's a download link for a compiled version:
 <img src="screenshot5.png" alt="drawing" width="320"/><img src="screenshot6.png" alt="drawing" width="320"/>
 
 ## Commands
-<addr>
+`
 * importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(true) { for(var i = 0; i < Packages.game.entity.MessageBox.queue.size(); i++) { Packages.game.entity.MessageBox.queue.get(i).kill(); }} } }).start();
 
 * importPackage(Packages.game.entity.MessageBox); new java.lang.Thread(new java.lang.Runnable() {run: function() {while(true) { System.out.println(Packages.game.entity.MessageBox.queue.size()); } } }).start();
@@ -32,4 +32,4 @@ Here's a download link for a compiled version:
 * game.killAllBattles();
 * player.data.setFloat("move_speed", 2)
 * player.addItem(ID,amount);
-</addr>
+`
